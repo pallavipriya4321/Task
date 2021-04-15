@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, SafeAreaView, StyleSheet, Image } from "react-native";
+import Header from "./components/Header.js";
+import SearchBox from "./components/SearchBox.js";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{ backgroundColor: "#f2f2f2", flex: 1 }}>
+      <Header />
+      <SearchBox />
+      {/* <Features /> */}
+      <h1 style={{ fontFamily: "sans-serif" }}>Our popular services</h1>
+      {/* <Services /> */}
+      <Footer />
+    </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
