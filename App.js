@@ -4,16 +4,23 @@ import Header from "./components/Header.js";
 import SearchBox from "./components/SearchBox.js";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
+import Menu from "./components/HamMenu/Menu";
+import Person from "./components/HamMenu/Person";
+import Contents from "./components/HamMenu/Contents.js";
 
 const App = () => {
   return (
-    <SafeAreaView style={{ backgroundColor: "#f2f2f2", flex: 1 }}>
+    <SafeAreaView style={{ backgroundColor: "#fff", flex: 1 }}>
       <Header />
       <SearchBox />
-      {/* <Features /> */}
-      <h1 style={{ fontFamily: "sans-serif" }}>Our popular services</h1>
-      {/* <Services /> */}
+      <Features />
+
+      <Services />
       <Footer />
+      {/* <Menu />
+      <Person />
+      <Contents /> */}
     </SafeAreaView>
   );
 };

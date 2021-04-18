@@ -1,36 +1,40 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
 
 const Footer = () => {
-  const size = 40;
-  const iconSize = 28;
+  // const size = 40;
+  const iconSize = 25;
   return (
     <View style={styles.footer}>
       <View style={{ marginLeft: 15 }}>
-        <MaterialIcons name="home-filled" size={24} color="black" />
+        <MaterialIcons name="home-filled" size={iconSize} color="black" />
+        <Text>Home</Text>
       </View>
       <View>
         <MaterialCommunityIcons
           name="star-box-outline"
-          size={24}
+          size={iconSize}
           color="black"
         />
+        <Text>My Request</Text>
       </View>
       <View>
         <MaterialCommunityIcons
           name="brightness-percent"
-          size={24}
+          size={iconSize}
           color="black"
         />
+        <Text>Discount</Text>
       </View>
       <View style={{ marginRight: 15 }}>
         <MaterialCommunityIcons
           name="bag-personal-outline"
-          size={24}
+          size={iconSize}
           color="black"
         />
+        <Text>Partners</Text>
       </View>
     </View>
   );
@@ -40,8 +44,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-end",
-    padding: 8,
+    textAlign: "center",
+    padding: 3,
     backgroundColor: "#fff",
+    //shadow
     shadowOffset: { width: 500 },
     bottom: 0,
     flex: 1,

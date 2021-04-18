@@ -1,15 +1,26 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, Button, SafeAreaView } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Menu from "./HamMenu/Menu";
+
+import { render } from "react-dom";
 
 const Header = () => {
-  const size = 40;
+  const size = 50;
   const iconSize = 28;
   return (
     <View style={styles.header}>
       <View style={{ marginLeft: 15 }}>
         <MaterialCommunityIcons name="menu" size={iconSize} color="black" />
+        {/* <Button
+          onPress={() => {
+            <SafeAreaView>
+              <Menu />
+            </SafeAreaView>;
+          }}
+        /> */}
       </View>
+
       <View>
         <Image
           source={require("../assets/comp.jpg")}
